@@ -1,0 +1,45 @@
+@import "tailwindcss";
+* {
+  font-family: "Outfit", "sans-serif" !important;
+}
+
+@theme {
+  --shadow-custom-soft: 0 2px 8px -2px rgba(87, 91, 95, 0.16);
+}
+
+@utility shadow-custom-soft {
+  /* Use the var you defined above */
+  box-shadow: var(--shadow-custom-soft);
+}
+
+@layer utilities {
+  .hover\:bg-custom-muted:hover {
+    background-color: rgba(87, 91, 95, 0.08);
+  }
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #dee2e6; /* light gray outer border */
+
+  display: block; /* make table a block to apply overflow */
+  overflow-x: auto; /* enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+table th,
+table td {
+  border: 1px solid #dee2e6; /* same light gray border for cells */
+  padding: 0.75rem; /* comfortable padding */
+  vertical-align: top;
+}
+
+table thead th {
+  background-color: #f8f9fa; /* light gray background for headers */
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc; /* light gray */
+  margin: 1.5rem 0; /* vertical spacing */
+}
